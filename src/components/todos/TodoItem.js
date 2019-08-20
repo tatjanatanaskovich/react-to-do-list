@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './TodoItem.styles.css';
+import './Todo.styles.css';
 
 
 class TodoItem extends Component {
@@ -14,7 +14,10 @@ class TodoItem extends Component {
   render() {
     const { id, title } = this.props.todo;
     return (
-      <div className="TodoItem" style={this.getStyle()}>
+      <div 
+        className="TodoItem" 
+        style={this.getStyle()}
+      >
         <p>
           <input 
             type="checkbox" 
@@ -23,8 +26,9 @@ class TodoItem extends Component {
           {' '}
           { title }
           <button 
+            className="DeleteBtn"
             onClick={this.props.deleteTodo.bind(this, id)} 
-            className="btn">
+          >
             x
           </button>
         </p>
