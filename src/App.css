@@ -17,3 +17,9 @@ a {
 .container {
   padding: 0 1rem;
 }
+
+.Link {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
