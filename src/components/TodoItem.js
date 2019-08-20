@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './TodoItem.styles.css';
 
 
-export class TodoItem extends Component {
+class TodoItem extends Component {
 
   getStyle = () => {
     return {
@@ -15,6 +15,11 @@ export class TodoItem extends Component {
     return (
       <div className="TodoItem" style={this.getStyle()}>
         <p>
+          <input 
+            type="checkbox" 
+            onChange={this.props.markComplete.bind(this, this.props.todo.id)} 
+          /> 
+          {' '}
           {this.props.todo.title}
         </p>
       </div>
