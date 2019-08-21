@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Todo.styles.css';
+
 
 class AddTodo extends Component {
   state = {
@@ -36,6 +38,12 @@ class AddTodo extends Component {
       </form>
     )
   }
+}
+
+
+//PropTypes
+AddTodo.propTypes = {
+  addTodo: PropTypes.func.isRequired
 }
 
 
